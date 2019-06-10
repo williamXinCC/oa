@@ -1,0 +1,53 @@
+<form id="editForm" class="panel-body form-horizontal form-padding">
+    <input type="hidden"  name="#(formModelName).id" class="form-control" value="#(o?o.id:'')">
+    <div class="form-group">
+        <label class="col-md-2 control-label">申请标题</label>
+        <div class="col-md-8">
+            <input type="text"  name="#(formModelName).title" class="form-control"  value="#(o?o.title:'')" #if(view=='detail') readonly #end>
+            <small class="help-block">请输入申请标题</small>
+        </div>
+    </div>
+
+    <div class="form-group" >
+        <label class="col-md-2 control-label">开始时间</label>
+        <div class="input-group date form_datetime col-md-2" style="float:left" >
+            <input class="form-control" name="#(formModelName).start_time" value="#(o?o.start_time:'')" type="text" placeholder="开始时间" readonly>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">结束时间</label>
+        <div class="input-group date form_datetime col-md-2" style="float:left">
+            <input type="text"  name="#(formModelName).end_time" class="form-control"  value="#(o?o.end_time:'')" placeholder="结束时间" readonly #if(view=='detail') readonly #end>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">天数</label>
+        <div class="col-md-8">
+            <input type="text"  name="#(formModelName).days" class="form-control"  value="#(o?o.days:'')" #if(view=='detail') readonly #end>
+            <small class="help-block">请输入天数</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">请假信息</label>
+        <div class="col-md-8">
+            <input type="text"  name="#(formModelName).message" class="form-control"  value="#(o?o.message:'')" #if(view=='detail') readonly #end>
+            <small class="help-block">请输入请假信息</small>
+        </div>
+    </div>
+    #@installFlowCCButton()
+    #if(view=='edit')
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-3">
+                <button class="btn btn-warning" type="reset" #if(view=='detail') disabled #end>重置</button>
+                <button class="btn btn-mint" type="submit" #if(view=='detail') disabled #end>保存</button>
+            </div>
+        </div>
+    </div>
+    #else
+    #end
+</form>
