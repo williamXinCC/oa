@@ -134,7 +134,7 @@
 		<dependency>
 		    <groupId>org.jsoup</groupId>
 		    <artifactId>jsoup</artifactId>
-		    <version>1.11.3</version>
+		    <version>1.14.2</version>
 		</dependency>
 		<dependency>
 		    <groupId>com.itextpdf</groupId>
@@ -240,7 +240,7 @@
 		<dependency>
 		    <groupId>org.jsoup</groupId>
 		    <artifactId>jsoup</artifactId>
-		    <version>1.10.3</version>
+		    <version>1.14.2</version>
 		</dependency>
 		<dependency>
 		    <groupId>net.sourceforge.htmlunit</groupId>
